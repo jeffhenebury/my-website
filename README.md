@@ -19,6 +19,7 @@ Home page (with links to other pages)
 •	I’m attempting some scrolling text. I have read that it’s considered gauche and passe, but that’s part of what I like about it! I was trying to use some starter JavaScript code from this HubSpot blog tutorial but couldn’t get it to work; using CSS animation, however, I’m having more luck.
 
 “Photos from my life” page
+
 •	Snapshots from Jeff’s life, captions talking about them
 •	Irreverent is what I’m going for
 “Writing from around the internets” page
@@ -26,9 +27,11 @@ Home page (with links to other pages)
 •	Use journo as a start: https://jeffhenebury.journoportfolio.com/ 
 •	3 columns: https://www.w3schools.com/howto/howto_css_three_columns.asp 
 
-“Art that Jeff loves” page\n
+“Art that Jeff loves” page
+
 •	Photos of the records I currently have in heaviest rotation, little explanations/ captions of what I think of them
 •	Data table of books that I love
 
 “Contact me” page
+
 •	A way to contact me. Ideally this would be an embedded form that folks could write a message and then it would be emailed to me. I’m not sure I have the skills for that yet, so it might just be my email address for now.
