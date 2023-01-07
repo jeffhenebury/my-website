@@ -26,8 +26,9 @@ Home page (with links to other pages)
 •	Use journo as a start: https://jeffhenebury.journoportfolio.com/ 
 •	3 columns: https://www.w3schools.com/howto/howto_css_three_columns.asp 
 
-“Art that Jeff loves” page
+“Art that Jeff loves” page\n
 •	Photos of the records I currently have in heaviest rotation, little explanations/ captions of what I think of them
 •	Data table of books that I love
+
 “Contact me” page
 •	A way to contact me. Ideally this would be an embedded form that folks could write a message and then it would be emailed to me. I’m not sure I have the skills for that yet, so it might just be my email address for now.
