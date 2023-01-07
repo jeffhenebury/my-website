@@ -1,0 +1,538 @@
+﻿body {
+    font-family: 'Julius Sans One';
+    background-color: #292929;
+    color: #dcdcdc;
+}
+
+a {
+    color: white;
+}
+
+#homeHeader {
+    font-size: 9em;
+    font-stretch: ultra-expanded;
+}
+
+.aboutMe{
+    display:block;
+    font-size: 1.25em;
+}
+
+#aboutMeStart {
+    margin-top: 3.5em;
+}
+
+img.aboutMe {
+    float: right;
+    margin-left: 3%;
+    margin-right: 3%;
+    width: 45%;
+    height: auto;
+    margin-bottom: 3%;
+    margin-top: 3%;
+    border: solid;
+    border-color: #dcdcdc;
+}
+    .aboutMe::after { /* Clear floats after the columns */
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+h1 {
+    font-size: 6em;
+    font-stretch: ultra-expanded;
+}
+
+
+
+h1, h2, h3, h4, h5, h6 {
+    text-align: center;
+}
+
+p {
+    font-family: 'PT Sans';
+}
+
+    p.foot {
+        font-size: 80%;
+        text-align: center;
+        margin-top: 4em;
+        float: none;
+    }
+
+table {
+    margin-bottom: 5em;
+    font-family: 'PT Sans';
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+    margin-bottom: 3%;
+    margin-top: 3%;
+}
+
+.centerAndZoom {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+    margin-bottom: 3%;
+    margin-top: 3%;
+}
+
+/*For links*/
+/*li {
+    display: inline;
+    padding-left: 5%;
+}
+ul {
+    margin: auto;
+}
+.tableOfContents {
+    display: flex;
+    text-align: center;
+    text-decoration: none;
+
+}*/
+#navBar {
+    overflow: hidden;
+    color: black;
+    background-color: #dcdcdc;
+    text-align: center;
+    padding: 2em 2em;
+}
+
+    #navBar a {
+        float: none;
+        color: #292929;
+        padding: 2em 2em;
+        text-decoration: none;
+        font-size: 1.3em;
+    }
+
+        #navBar a:hover {
+            opacity: 0.5;
+        }
+
+        #navBar a.active {
+            background-color: #04AA6D;
+            color: white;
+        }
+
+.row {
+    display: flex;
+}
+
+.column {
+    flex: 50%;
+}
+/*Below are for the Art page*/
+.rowOf3::after { /* Clear floats after the columns */
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.rowOf3 img.zoomed {
+    transform: scale(1.5);
+}
+
+.columnOf3 {
+    float: left;
+    width: 33.33%;
+    height: auto;
+}
+
+/*modal for enlarging photos in Art*/
+
+#artPix {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+    #artPix:hover {
+        opacity: 0.7;
+    }
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 800px;
+}
+
+/* Caption of Modal Image */
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+
+/* Add Animation */
+.modal-content, #caption {
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+    from {
+        -webkit-transform: scale(0)
+    }
+
+    to {
+        -webkit-transform: scale(1)
+    }
+}
+
+@keyframes zoom {
+    from {
+        transform: scale(0)
+    }
+
+    to {
+        transform: scale(1)
+    }
+}
+
+/* The Close Button */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+    .close:hover,
+    .close:focus {
+        color: #bbb;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px) {
+    .modal-content {
+        width: 100%;
+    }
+}
+
+#records {
+    display: flex;
+    margin-bottom: 3em;
+}
+#records::after { /* Clear floats after the columns */
+    content: "";
+    display: table;
+    clear: both;
+
+}
+/* Sizing for Project Containers  */
+#records img {
+/*    width: 45%;
+*/    height: auto;
+    padding: 1%;
+    margin: 3%;
+    margin-left: 15%;
+    border: solid;
+    border-color: #dcdcdc;
+    flex: 50%;
+}
+#records figure {
+    display: flex;
+    flex-flow: column;
+   justify-content: flex-start;
+}
+
+    #records figcaption {
+        align-self: flex-start;
+        border-top: 2px solid rgb(169, 13, 94);
+        border-bottom: 2px solid rgb(169, 13, 94);
+        font-size: 100%;
+        width: 20vw;
+        text-align: center;
+        margin-left: 15%;
+    }
+
+
+
+/****************************/
+/*Think we start photos here*/
+.caption {
+    text-align: center;
+    vertical-align: middle;
+    margin-top: 4em;
+    margin-bottom: 4em;
+    font-size: 1.5em;
+    width: 80%;
+}
+
+.bad {
+    font-family: "Butcherman";
+    font-size: 3em;
+}
+/*contact page */
+.subscribe {
+    border: 1px solid #ccc;
+    padding: 3px;
+    text-align: center;
+    margin-bottom: 4em;
+}
+
+#contact {
+    font-size: 1.25em;
+    text-align: center;
+}
+/*end contact page */
+
+
+/********************/
+/*writing page*/
+.writing-heading {
+    text-align: center;
+    color: #102C4E;
+    margin-top: 150px;
+    margin-bottom: 70px;
+    font-size: 35px;
+}
+
+
+.writingTable::after { /* Clear floats after the columns */
+    content: "";
+    display: table;
+    clear: both;
+}
+/* Sizing for Project Containers  */
+.writersBlock {
+    float: left;
+    width: 45%;
+    padding: 10px;
+    margin: 20px;
+    height: 250px;
+    vertical-align: middle;
+}
+
+.PaulSingh {
+    background: url('images/writingImages/techTour.jpg');
+    background-size: cover;
+}
+
+.HotSpot {
+    background: url('images/writingImages/hotSpot.jpg');
+    background-size: cover;
+    background-position-y: 25%;
+}
+
+.caravan {
+    background: url('images/writingImages/caravan.jpg');
+    background-size: cover;
+    background-position-y: 25%;
+}
+
+.cart {
+    background: url('images/writingImages/cart.jpg');
+    background-size: contain;
+    background-position-x: center;
+}
+
+.grandmaKat {
+    background: url('images/writingImages/grandmaKat.png');
+    background-size: contain;
+    background-position: center;
+}
+
+.newZealand {
+    background: url('images/writingImages/newZealandYoga.jpg');
+    background-size: cover;
+    background-position-y: 20%;
+}
+
+/*.artNotes {
+    background: url('images/writingImages/jeffkoons.jpg');
+    background-size: cover;
+    background-position-y: 18%;
+}
+*/
+
+
+
+.writing_columnOf3_4 {
+
+    background: url('images/writingImages/cart.JPG');
+    display: flex;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.writersBlock:hover /*.writing_columnOf3_1 */ {
+    opacity: 0.75;
+    transition: .5s ease;
+    background: none;
+    background-color: orange;
+}
+
+
+    .writersBlock:hover .sneakyWriting {
+        opacity: 1;
+        transition: .5s ease;
+    }
+
+.sneakyWriting {
+    opacity: 0;
+    font-size: 6em;
+    text-align: center;
+    overflow-wrap: break-word;
+    /*    margin-bottom: 2.5em;
+*/ /*margin-top: 2.5em;*/
+}
+
+.writing-text {
+    text-align: center;
+    font-size: 50px;
+}
+
+/********************/
+/*end writing page*/
+
+/*From hubspot, css form scroll*/
+/* this one should go from left to right*/
+#scroll-container {
+    border: 3px solid #dcdcdc;
+    border-radius: 5px;
+    overflow: hidden;
+    font-size: 2em;
+    margin-top: 1.5em;
+}
+
+#scroll-text {
+    text-align: right;
+    /* animation properties */
+    -moz-transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+    -moz-animation: my-animation 15s linear infinite;
+    -webkit-animation: my-animation 15s linear infinite;
+    animation: my-animation 15s linear infinite;
+    animation-delay: 1.5s;
+}
+
+/* for Firefox */
+@-moz-keyframes my-animation {
+    from {
+        -moz-transform: translateX(-100%);
+    }
+
+    to {
+        -moz-transform: translateX(100%);
+    }
+}
+
+/* for Chrome */
+@-webkit-keyframes my-animation {
+    from {
+        -webkit-transform: translateX(-100%);
+    }
+
+    to {
+        -webkit-transform: translateX(100%);
+    }
+}
+
+@keyframes my-animation {
+    from {
+        -moz-transform: translateX(-100%);
+        -webkit-transform: translateX(-100%);
+        transform: translateX(-100%);
+    }
+
+    to {
+        -moz-transform: translateX(100%);
+        -webkit-transform: translateX(100%);
+        transform: translateX(100%);
+    }
+}
+
+
+#scroll-container2 {
+    border: 3px solid #dcdcdc;
+    border-radius: 5px;
+    overflow: hidden;
+    font-size: 2em;
+}
+
+#scroll-text2 {
+    /* animation properties */
+    -moz-transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+    -moz-animation: my-animation2 15s linear infinite;
+    -webkit-animation: my-animation2 15s linear infinite;
+    animation: my-animation2 15s linear infinite;
+    animation-delay: 5s; /*don't start right away*/
+}
+
+/* for Firefox */
+@-moz-keyframes my-animation2 {
+    from {
+        -moz-transform: translateX(100%);
+    }
+
+    to {
+        -moz-transform: translateX(-100%);
+    }
+}
+
+/* for Chrome */
+@-webkit-keyframes my-animation2 {
+    from {
+        -webkit-transform: translateX(100%);
+    }
+
+    to {
+        -webkit-transform: translateX(-100%);
+    }
+}
+
+@keyframes my-animation2 {
+    from {
+        -moz-transform: translateX(100%);
+        -webkit-transform: translateX(100%);
+        transform: translateX(100%);
+    }
+
+    to {
+        -moz-transform: translateX(-100%);
+        -webkit-transform: translateX(-100%);
+        transform: translateX(-100%);
+    }
+}

@@ -1,0 +1,76 @@
+﻿<!--Jeff Henebury writing page-->
+<!DOCTYPE html>
+
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Julius+Sans+One" type="text/css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Butcherman" type="text/css" />
+    <!--<link rel="stylesheet" href="jeff-styles.css">-->
+    <title>Jeff's TEST Page</title>
+    <style>
+        .container {
+            position: relative;
+            width: 50%;
+            float: left;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+
+        .image {
+            display: block;
+            width: 50%;
+            height: 50%;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 100%;
+            width: 100%;
+            opacity: 0;
+            transition: .5s ease;
+            background-color: #008CBA;
+        }
+
+        .container:hover .overlay {
+            opacity: .75;
+        }
+
+        .text {
+            color: white;
+            font-size: 4em;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <a href="https://tinyurl.com/paulsinghtecharb" target="_blank">
+        <div class="container">
+            <img src="images/writingImages/techTour.JPG" alt="Paul Singh and wife" class="image">
+            <div class="overlay">
+                <div class="text">Paul Singh's Tech Tour</div>
+            </div>
+        </div>
+    </a>
+    <a href="https://medium.com/techarb/driving-community-led-change-in-detroit-an-interview-with-caravan-94c9d39b02c2" target="_blank">
+        <div class="container">
+            <img src="images/writingImages/caravan.JPG" alt="Avatar" class="image">
+            <div class="overlay">
+                <div class="text">Driving Community-led Change in Detroit</div>
+            </div>
+        </div>
+    </a>
+</body>
+</html>

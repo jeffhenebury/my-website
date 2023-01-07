@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Modal Images">
+    <meta name="keywords" content="Javascript, programming, doggie">
+    <link rel="stylesheet" href="jeff-styles.css">
+
+    <!-- A demo of the image modal, clicking on the thumbnail
+    to get a larger image.
+    By A.K.
+    2019 -->
+    <title>JEFF Modals</title>
+   
+</head>
+<body>
+
+    <h1>Image Modal</h1>
+    <div>
+        <p>
+            An image modal is an example of a modal box.<br>
+            We are able to click on the image and have it fill a box that appears on the page,<br>
+            but remains on the current page.<br>
+            This means a shorter load time, since we are not going to a new page
+        </p>
+
+        <img id="dogpix" src="images/journal1.JPG" alt="The queen of all she surveys" width="300" height="200">
+        <p>Use a JavaScript function to trigger the modal and to display the current image inside the modal when it is clicked on. The value from the image's "alt" attribute becomes the image's caption.</p>
+    </div>
+    <!-- The Modal -->
+    <div id="dogmodal" class="modal">
+        <span class="close">X</span>
+        <img class="modal-content" id="lab">
+        <div id="caption"></div>
+    </div>
+
+    <div class="row">
+        <div class="column">
+            <img id="dogpix" src="images/journal1.JPG" alt="The queen of all she surveys" width="300" height="200">
+        </div>
+        <div class="column">
+            <p class="caption">This is Tip. He is very handsome and very bad. We were moving away from Minneapolis so I could go to the Helen Zell Writers Program at the University of Michigan. Friends helped us move; at the end, furniture-less, we ate pizza on a cardboard box. </p>
+        </div>
+    </div>
+
+    <script>
+        // Get the modal
+        var modal = document.getElementById('dogmodal');
+        //The small image is 'dogpix' The modal image is 'lab' They are the same image.
+        // Get the image and insert it inside the modal - use its "alt" text as a caption
+        var img = document.getElementById('dogpix');
+        var modalImg = document.getElementById("lab");
+        var captionText = document.getElementById("caption");
+        img.onclick = function () {
+            modal.style.display = "block";
+            modalImg.src = this.src;
+            modalImg.alt = this.alt;
+            captionText.innerHTML = this.alt;
+        }
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+    </script>
+
+</body>
+</html>
